@@ -22,4 +22,5 @@ public class DateUtil {
     public static Long parseDateToTimestampWithDefaultPattern(String date) {
         return parseDateToTimestamp(date, DEFAULT_PATTEN);
     }
+
 }
