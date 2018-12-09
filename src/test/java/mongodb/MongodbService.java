@@ -36,6 +36,15 @@ public class MongodbService {
         Document document = Document.parse(JSON.toJSONString(user));
         collection.insertOne(document);
 
+
+
+
+
+
+
+
+
+
         System.err.println("success");
 
     }

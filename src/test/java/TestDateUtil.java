@@ -1,5 +1,9 @@
 import org.apache.xmlbeans.impl.xb.xsdschema.impl.LocalComplexTypeImpl;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.security.acl.LastOwnerException;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
@@ -33,7 +37,34 @@ public class TestDateUtil {
         System.err.println(new Date());
 
 
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        System.err.println(list.stream().mapToInt(Integer::intValue).sum());
 
+
+
+        try {
+            File file = new File("c:\\aaa");
+            InputStream inputStream = new FileInputStream(file);
+        } catch (IOException e) {
+            System.err.println(e);
+        }
+        System.err.println("catch catch");
+
+        LocalDateTime replyTime = LocalDateTime.now();
+        System.err.println(replyTime.format(DateTimeFormatter.ofPattern("HH:mm")));
+
+
+
+
+    }
+    class A {
+        public A(){
+            return;
+        }
     }
 
 
