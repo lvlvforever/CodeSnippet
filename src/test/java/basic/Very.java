@@ -6,37 +6,32 @@
  */
 package basic;
 
+import com.alibaba.fastjson.JSON;
 import com.sun.javafx.image.impl.ByteIndexed;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 
 import javax.jnlp.DownloadService;
-import java.time.Duration;
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
+import java.time.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Very {
+    public static final Long DAY31 = 31 * 24 * 60 * 60 * 1000L;
     public static void main(String[] args) {
-//        int sec = 1;
-        LocalDateTime start = LocalDateTime.of(2019, 1, 15, 3, 0, 0);
-        LocalDateTime now = LocalDateTime.of(2019, 1, 21, 0, 0, 0);
+//
 
 
+        LocalDateTime a = LocalDateTime.of(2019, 1, 31, 20, 0, 0);
+        LocalDateTime b = LocalDateTime.of(2019, 3, 3, 20, 0, 0);
+        long day = Duration.between(a, b).toDays();
+        System.err.println(day);
 
 
-//        LocalDateTime now = LocalDateTime.of(2019, 1, 21, 0, 00, 00);
+        Long m = Duration.between(LocalDateTime.now(), LocalDate.of(2019, 3, 1).atTime(0, 0, 0)).toMinutes();
 
-//
-//
-//
-//
-//
-//
-//
-//
-        System.err.println(Duration.between(start,now).toMillis()  / 1000);
-
+        System.err.println(m);
 
     }
 }
+

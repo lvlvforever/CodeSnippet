@@ -16,6 +16,7 @@ import org.bson.Document;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class MongodbService {
     public static void main(String[] args) {
@@ -28,20 +29,17 @@ public class MongodbService {
 
 
         MongoClientOptions options = mongoClient.getMongoClientOptions();
+        MongoCollection<Document> collection = mongoDatabase.getCollection("bigUserCollection");
 
         JSONObject user = new JSONObject();
-        user.put("name", "zhangsan");
-        user.put("weight", 180);
-        MongoCollection<Document> collection = mongoDatabase.getCollection("user");
-        Document document = Document.parse(JSON.toJSONString(user));
-        collection.insertOne(document);
-
-
-
-
-
-
-
+        for (int i = 0; i < 10000000; i++) {
+            System.err.println(i);
+            user.put("name", "zhangsan"+i);
+            user.put("age", i);
+            user.put("status", new Random().nextInt(10));
+            Document document = Document.parse(JSON.toJSONString(user));
+            collection.insertOne(document);
+        }
 
 
 

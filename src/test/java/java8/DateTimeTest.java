@@ -20,6 +20,12 @@ public class DateTimeTest {
 
 
         LocalDateTime nowLocalDateTime = LocalDateTime.now();
+
+        System.err.println(nowLocalDateTime);
+
+        Date date = new Date();
+
+
         LocalDateTime localDateTime = LocalDateTime.of(2019, 1, 15, 22, 24, 0);
 
         //LocalDateTime thirddate = LocalDateTime.of(2019, 1, 13, 21, 0, 1);
@@ -29,10 +35,31 @@ public class DateTimeTest {
         System.err.println(parseTimeOscar(1547276640000L));
 
 
+        nowLocalDateTime.getMonth();
+
+
         Map<String, String> a = new LinkedHashMap<>();
         a.put("a", "a");
         a.put("b", "b");
 
+//        Duration.between()
+
+
+
+        System.err.println(new Date().toInstant());
+        Instant instant = new Date().toInstant();
+
+        Date date1 = Date.from(instant);
+        System.err.println(date1);
+
+
+
+        //LocalDateTime time = instant.atZone(ZoneId.systemDefault()).toLocalDateTime();
+        //System.err.println(time);
+        System.err.println(date1);
+
+
+        LocalDateTime newYear = LocalDateTime.of(2019, 1, 1, 0, 0, 0);
 
 
 

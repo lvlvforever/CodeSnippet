@@ -1,0 +1,19 @@
+{
+    "query":{
+        "stype":"template",
+        "template_name":"topic",
+        "action_type":"shown"
+
+    },
+    "redis_key":[
+        "#{date}",
+        "${activity_id}",
+        "${atom_plat}"
+    ],
+    "final_key":[
+        "exposure"
+    ],
+    "setting":{
+        "unique_key":"qimei"
+    }
+}

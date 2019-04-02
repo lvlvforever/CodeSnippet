@@ -13,10 +13,38 @@ import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
 public class OldDateTime {
-    public static void main(String[] args) {
-        Date date = new Date();
 
+    private static final Date date = new Date();
+
+    public static void main(String[] args) {
+
+        //第一次方法调用
+        Date curDate = getCurDate();
+        System.err.println("第一次调用"+curDate);
+        curDate.setTime(curDate.getTime() + 1000000L);
+        //第二次方法调用
+        curDate = getCurDate();
+        System.err.println("第二次调用"+curDate);
+
+
+
+
+
+        Date date = new Date();
         System.err.println(date);
+
+
+
+
+
+        System.err.println(date.getMonth());
+
+        System.err.println(date.getYear());
+
+
+        System.err.println(date.getTime());
+
+
         Calendar calendar = Calendar.getInstance();
         Long time = calendar.getTimeInMillis();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -25,16 +53,23 @@ public class OldDateTime {
         System.err.println(today);
 
 
+        Date date1 = new Date(2019, 11, 12);
+        System.err.println(date1);
 
 
 
 
-
-
-
-        System.err.println(calendar);
-
-        TimeZone zone = TimeZone.getDefault();
-        System.err.println(zone);
     }
+
+    public static Date getCurDate() {
+        //some other operations ...
+        //System.err.println(date);
+
+        return date;
+    }
+
+
+
+
+
 }

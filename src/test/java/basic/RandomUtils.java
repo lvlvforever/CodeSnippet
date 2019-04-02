@@ -17,6 +17,8 @@ public class RandomUtils {
         Set<Integer> set = new TreeSet<Integer>();
         set.add(0);
         set.add(expectedSum);
+
+
         Random random = new Random();
         while (set.size() < expectedNum + 1) {
             set.add(random.nextInt(expectedSum - 1) + 1);
@@ -49,7 +51,7 @@ public class RandomUtils {
     public static void main(String[] args) {
         RandomUtils util = new RandomUtils();
         System.out.println("随机产生和为30的5个正整数如下：");
-        List<Integer> number = util.generateRandomArray(100, 20,30);
+        List<Integer> number = util.generateRandomArray(100, 3,0);
         int sum = 0;
         System.err.println(number);
         System.err.println(number.size());

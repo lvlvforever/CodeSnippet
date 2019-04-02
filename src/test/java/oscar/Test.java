@@ -6,11 +6,25 @@
  */
 package oscar;
 
+import org.apache.commons.lang3.math.NumberUtils;
+
 import java.time.LocalDateTime;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Test {
     public static void main(String[] args) {
+
+        System.err.println(NumberUtils.isParsable("11555"));
+
+
+        Integer[] a = new Integer[]{1, 23, 4};
+        Arrays.stream(a).map(k -> k+1).collect(Collectors.toSet());
+
+
+
+
+
 
 
 

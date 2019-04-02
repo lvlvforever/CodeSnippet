@@ -26,6 +26,7 @@ public class BitSetTest {
         int lastHasNumSec = 200000;
         int bookNum = 158;
 
+
 //
 //
         Integer sum = 0;
