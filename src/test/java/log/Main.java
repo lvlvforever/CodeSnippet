@@ -13,7 +13,9 @@ import org.apache.commons.lang3.CharSet;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -26,14 +28,15 @@ public class Main {
 
     }
 
-    private Map<String, String> queryKey(JSONObject target) {
+    private Map<String, Object> queryKey(JSONObject target) {
+        Map<String, Object> queryKeys = new HashMap<>();
+
         JSONObject query = target.getJSONObject("query");
-
-
-
-
-
-
+        if (query == null) {
+            return queryKeys;
+        }
+        queryKeys = query.getInnerMap();
+        return queryKeys;
     }
 
 

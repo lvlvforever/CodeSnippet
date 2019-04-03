@@ -14,6 +14,6 @@
         "exposure"
     ],
     "setting":{
-        "unique_key":"qimei"
+        "unique_key":"${qimei}"
     }
 }
