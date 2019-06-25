@@ -7,8 +7,11 @@
 package java8;
 
 import java.time.DayOfWeek;
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.temporal.TemporalAdjuster;
+import java.util.HashMap;
+import java.util.Map;
 
 import static java.time.temporal.TemporalAdjusters.*;
 
@@ -64,6 +67,22 @@ public class ComplexDemo {
         LocalDateTime friday = LocalDateTime.of(2019, 1, 18,0,0,0);
         LocalDateTime nextWorkingDay = friday.with(adjuster);
         System.err.println(nextWorkingDay);
+
+
+        Instant instant = Instant.now();
+
+
+        Map<String, Object> map = new HashMap<>();
+        System.err.println((String) map.get("ip"));
+
+
+        Long a = null;
+        Long now = Instant.now().toEpochMilli();
+        if (a < now) {
+            System.err.println("fdfdsf");
+        }
+
+
 
 
 

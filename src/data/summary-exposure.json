@@ -1,11 +1,11 @@
 {
-    "query":{
+    "condition":{
         "stype":"template",
         "template_name":"topic",
         "action_type":"shown"
 
     },
-    "redis_key":[
+    "prefix_key":[
         "#{date}",
         "${activity_id}",
         "${atom_plat}"
@@ -17,3 +17,4 @@
         "unique_key":"${qimei}"
     }
 }
+stype:aa template:dddd action_type:fdsfdsf

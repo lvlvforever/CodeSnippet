@@ -52,11 +52,11 @@ public class ExcelPoiTest {
         CellRangeAddress cra = new CellRangeAddress(1, 3, 1, 3); // 起始行, 终止行, 起始列, 终止列
         sheet.addMergedRegion(cra);
 
-        // 使用RegionUtil类为合并后的单元格添加边框
-        RegionUtil.setBorderBottom(1, cra, sheet); // 下边框
-        RegionUtil.setBorderLeft(1, cra, sheet); // 左边框
-        RegionUtil.setBorderRight(1, cra, sheet); // 有边框
-        RegionUtil.setBorderTop(1, cra, sheet); // 上边框
+//        // 使用RegionUtil类为合并后的单元格添加边框
+//        RegionUtil.setBorderBottom(1, cra, sheet); // 下边框
+//        RegionUtil.setBorderLeft(1, cra, sheet); // 左边框
+//        RegionUtil.setBorderRight(1, cra, sheet); // 有边框
+//        RegionUtil.setBorderTop(1, cra, sheet); // 上边框
 
         // 输出到本地
         String excelName = "/myExcel.xls";

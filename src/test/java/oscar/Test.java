@@ -6,9 +6,13 @@
  */
 package oscar;
 
+import basic.Local;
 import org.apache.commons.lang3.math.NumberUtils;
 
+import java.time.Duration;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.Period;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -22,8 +26,13 @@ public class Test {
         Arrays.stream(a).map(k -> k+1).collect(Collectors.toSet());
 
 
+        Long b = 12900000000000000L;
+        long c = 12900000000000000L;
+        System.err.println(b.equals(c));
 
+        LocalDate date = LocalDate.of(2018, 9, 15);
 
+        System.err.println(LocalDate.now().toEpochDay() - date.toEpochDay());
 
 
 

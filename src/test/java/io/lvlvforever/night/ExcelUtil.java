@@ -22,9 +22,6 @@ public class ExcelUtil {
             return list;
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (InvalidFormatException e2) {
-            e2.printStackTrace();
-
         }
         return null;
     }

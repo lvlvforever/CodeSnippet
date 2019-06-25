@@ -7,18 +7,34 @@
 package fastjson;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+
+import java.io.PrintWriter;
+import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Test {
-    public static void main(String[] args) {
-        Student stu = new Student("wang");
-        String json = JSON.toJSONString(stu);
-        System.err.println(json);
+    public static void main(String[] args) throws Exception{
 
-        Student student = JSON.parseObject(json, Student.class);
-        System.err.println(student);
+        Prize a = new Prize();
+        a.setName("1");
+        Prize b = new Prize();
+        b.setName("1");
+        List<Prize> prizes = new ArrayList<>();
+        prizes.add(a);
+        prizes.add(b);
+        String json = JSON.toJSONString(prizes);
 
+        ArrayList<Prize> list = (ArrayList<Prize>) JSON.parseArray(json, Prize.class);
+        System.err.println(list);
 
-        System.err.println(1548989899685L - 1548989891563L > 5 * 1000);
+        long total = 1;
+        int pageSize = 15;
 
+        int totl =  (int)Math.round(Math.ceil(total / pageSize));
+        System.err.println(totl);
     }
 }
